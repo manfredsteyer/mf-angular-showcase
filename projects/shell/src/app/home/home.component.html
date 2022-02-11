@@ -1,0 +1,31 @@
+<h1>eProcurement</h1>
+
+<ng-container *ngIf="loggedInAs; else loginBlock">
+    <h2>Hello, {{loggedInAs}}!</h2>
+
+    <button mat-flat-button color="primary" (click)="logout()">Logout</button>
+
+</ng-container>
+
+<ng-template #loginBlock>
+    <p>Please log in here!</p>
+
+    <form class="example-form">
+        <mat-form-field class="login-field" appearance="fill">
+            <mat-label>Username</mat-label>
+            <input matInput [(ngModel)]="userName" name="userName">
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field class="login-field" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput [(ngModel)]="password" name="password">
+        </mat-form-field>
+
+        <br>
+
+        <button mat-flat-button color="primary" (click)="login()">Login</button>
+
+    </form>
+</ng-template>
