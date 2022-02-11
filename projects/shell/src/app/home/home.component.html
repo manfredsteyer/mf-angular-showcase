@@ -1,11 +1,9 @@
 <div class="content">
     <h1>eProcurement</h1>
 
-    <ng-container *ngIf="loggedInAs; else loginBlock">
-        <h2>Hello, {{loggedInAs}}!</h2>
-
+    <ng-container *ngIf="auth.currentUser; else loginBlock">
+        <h2>Hello, {{auth.currentUser}}!</h2>
         <button mat-flat-button color="primary" (click)="logout()">Logout</button>
-
     </ng-container>
 
     <ng-template #loginBlock>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '@demo/auth';
 
 @Component({
   selector: 'app-home',
@@ -7,22 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  loggedInAs = '';
-
   userName = '';
   password = '';
 
-  constructor() { }
+  constructor(readonly auth: AuthService) { }
 
   ngOnInit(): void {
   }
 
   login(): void {
-    this.loggedInAs = this.userName;
+    this.auth.login(this.userName, this.password);
   }
 
   logout(): void {
-    this.loggedInAs = '';
+    this.auth.logout();
   }
 
 }

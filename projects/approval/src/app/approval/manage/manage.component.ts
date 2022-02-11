@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '@demo/auth';
 
 @Component({
   selector: 'app-manage',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManageComponent implements OnInit {
 
-  constructor() { }
+  constructor(readonly auth: AuthService) { }
 
   ngOnInit(): void {
   }

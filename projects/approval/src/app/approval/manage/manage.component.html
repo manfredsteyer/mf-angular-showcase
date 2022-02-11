@@ -1,3 +1,11 @@
-<h1>Manage Your Approval</h1>
+<ng-container *ngIf="auth.currentUser; else noUser">
+    <h1><b>{{auth.currentUser}}</b>, Please Approve These Requests</h1>
 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, voluptas. Distinctio, sint dolore commodi deserunt molestias iste exercitationem porro magnam quia enim quos! Mollitia saepe consequatur aperiam nam perspiciatis dignissimos!
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, voluptas. Distinctio, sint dolore commodi deserunt molestias iste exercitationem porro magnam quia enim quos! Mollitia saepe consequatur aperiam nam perspiciatis dignissimos!
+</ng-container>
+
+<ng-template #noUser>
+    <p>
+        Please login before approving requests.
+    </p>
+</ng-template>
