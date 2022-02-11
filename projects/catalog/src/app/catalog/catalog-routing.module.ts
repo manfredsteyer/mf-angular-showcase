@@ -11,6 +11,10 @@ const routes: Routes = [
         component: CatalogComponent,
         children: [
           {
+            path: '',
+            redirectTo: 'browse-products'
+          },
+          {
             path: 'browse-products',
             component: BrowseProductsComponent
           },

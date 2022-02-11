@@ -10,13 +10,18 @@ const routes: Routes = [
         component: ApprovalComponent,
         children: [
           {
-            path: 'history',
-            component: HistoryComponent
+            path: '',
+            redirectTo: 'manage'
           },
           {
             path: 'manage',
             component: ManageComponent
-          }
+          },
+          {
+            path: 'history',
+            component: HistoryComponent
+          },
+
         ]
     },
 ];

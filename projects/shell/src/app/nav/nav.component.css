@@ -17,7 +17,8 @@
 }
 
 .content {
-  margin:35px;
+  margin:0px;
+  height: 100%;
 }
 
 .app-title {

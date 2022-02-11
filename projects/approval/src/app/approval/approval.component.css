@@ -4,6 +4,7 @@
 
 .sidenav {
   width: 200px;
+  padding:15px;
 }
 
 .sidenav .mat-toolbar {

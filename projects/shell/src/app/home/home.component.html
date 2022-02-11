@@ -1,31 +1,33 @@
-<h1>eProcurement</h1>
+<div class="content">
+    <h1>eProcurement</h1>
 
-<ng-container *ngIf="loggedInAs; else loginBlock">
-    <h2>Hello, {{loggedInAs}}!</h2>
+    <ng-container *ngIf="loggedInAs; else loginBlock">
+        <h2>Hello, {{loggedInAs}}!</h2>
 
-    <button mat-flat-button color="primary" (click)="logout()">Logout</button>
+        <button mat-flat-button color="primary" (click)="logout()">Logout</button>
 
-</ng-container>
+    </ng-container>
 
-<ng-template #loginBlock>
-    <p>Please log in here!</p>
+    <ng-template #loginBlock>
+        <p>Please log in here!</p>
 
-    <form class="example-form">
-        <mat-form-field class="login-field" appearance="fill">
-            <mat-label>Username</mat-label>
-            <input matInput [(ngModel)]="userName" name="userName">
-        </mat-form-field>
+        <form class="example-form">
+            <mat-form-field class="login-field" appearance="fill">
+                <mat-label>Username</mat-label>
+                <input matInput [(ngModel)]="userName" name="userName">
+            </mat-form-field>
 
-        <br>
+            <br>
 
-        <mat-form-field class="login-field" appearance="fill">
-            <mat-label>Password</mat-label>
-            <input type="password" matInput [(ngModel)]="password" name="password">
-        </mat-form-field>
+            <mat-form-field class="login-field" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput [(ngModel)]="password" name="password">
+            </mat-form-field>
 
-        <br>
+            <br>
 
-        <button mat-flat-button color="primary" (click)="login()">Login</button>
+            <button mat-flat-button color="primary" (click)="login()">Login</button>
 
-    </form>
-</ng-template>
+        </form>
+    </ng-template>
+</div>
